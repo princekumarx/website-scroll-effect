@@ -11,13 +11,13 @@ $background: #eee;
 .section1 {
   width: 100%;
   height: 100%;
-
+  margin-bottom: 25px;
   img {
     position: absolute;
     width: 47%;
     top: 0;
     left: 0px;
-    bottom: 20px;
+
     z-index: -1;
   }
   .container {
@@ -340,6 +340,9 @@ $background: #eee;
 // ----------------------- media query ----------
 
 @media (max-width: 525px) {
+  .section1 {
+    margin-bottom: 0;
+  }
   .feature {
     flex-direction: column;
     height: 100%;
