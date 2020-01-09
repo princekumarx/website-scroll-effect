@@ -1,10 +1,11 @@
 *,
 html {
   margin: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .section1 {
@@ -230,11 +231,12 @@ html {
 }
 
 .feature .left {
-  width: 45%;
+  width: 47%;
   height: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: auto !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
@@ -243,13 +245,12 @@ html {
 
 .feature .left h2 {
   font-size: 1.3rem;
-  margin-left: 20px;
   word-spacing: 3px;
   font-weight: lighter;
   color: #303030;
   margin-bottom: 20px;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .feature .left h2::before {
@@ -258,24 +259,32 @@ html {
   height: 4px;
   position: absolute;
   background-color: rgba(209, 12, 12, 0.877);
+  left: 0px;
   bottom: 0;
+}
+
+.feature .left ul {
+  padding-left: 0;
+  width: 100%;
 }
 
 .feature .left ul li {
   list-style-type: none;
+  width: 100%;
   padding-bottom: 20px;
   font-size: 0.9rem;
   color: #3a3a3a;
   position: relative;
+  left: 5%;
 }
 
-.feature .left ul li::after {
+.feature .left ul li::before {
   content: "";
   width: 5px;
   height: 5px;
   background-color: rgba(209, 12, 12, 0.877);
   position: absolute;
-  left: -20px;
+  left: -15px;
   top: 6px;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
@@ -283,7 +292,7 @@ html {
 
 .feature .right {
   height: 60%;
-  width: 50%;
+  width: 47%;
 }
 
 .feature .right img {
@@ -295,7 +304,7 @@ html {
 
 .contact-form {
   margin-top: 10px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: #eee;
   font-family: sans-serif;
@@ -423,6 +432,7 @@ html {
   }
   .contact-form {
     height: 100%;
+    width: 100%;
   }
   .contact-form .form {
     -webkit-box-orient: vertical;
@@ -437,6 +447,10 @@ html {
             justify-content: center;
   }
   .contact-form .form .left-form {
+    width: 100%;
+  }
+  .contact-form .form .left-form form input,
+  .contact-form .form .left-form form textarea {
     width: 100%;
   }
   .contact-form .form .right-form {

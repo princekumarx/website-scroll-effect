@@ -1,9 +1,11 @@
 *,
 html {
   margin: 0px;
-  box-sizing: border-box;
-  overflow-x: hidden;
+
   scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
 }
 $color: rgba(209, 12, 12, 0.877);
 $background: #eee;
@@ -181,54 +183,58 @@ $background: #eee;
   padding: 10px 10px;
   font-family: sans-serif;
   .left {
-    width: 45%;
+    width: 47%;
     height: 60%;
     display: flex;
-
+    overflow-x: auto !important;
     flex-flow: column;
-
     h2 {
       font-size: 1.3rem;
-      margin-left: 20px;
+
       word-spacing: 3px;
       font-weight: lighter;
       color: rgb(48, 48, 48);
       margin-bottom: 20px;
       position: relative;
-      padding-bottom: 10px;
+      padding-bottom: 15px;
       &::before {
         content: "";
         width: 70px;
         height: 4px;
         position: absolute;
         background-color: $color;
-
+        left: 0px;
         bottom: 0;
       }
     }
 
-    ul li {
-      list-style-type: none;
-
-      padding-bottom: 20px;
-      font-size: 0.9rem;
-      color: rgb(58, 58, 58);
-      position: relative;
-      &::after {
-        content: "";
-        width: 5px;
-        height: 5px;
-        background-color: $color;
-        position: absolute;
-        left: -20px;
-        top: 6px;
-        transform: rotate(40deg);
+    ul {
+      padding-left: 0;
+      width: 100%;
+      li {
+        list-style-type: none;
+        width: 100%;
+        padding-bottom: 20px;
+        font-size: 0.9rem;
+        color: rgb(58, 58, 58);
+        position: relative;
+        left: 5%;
+        &::before {
+          content: "";
+          width: 5px;
+          height: 5px;
+          background-color: $color;
+          position: absolute;
+          left: -15px;
+          top: 6px;
+          transform: rotate(40deg);
+        }
       }
     }
   }
   .right {
     height: 60%;
-    width: 50%;
+    width: 47%;
 
     img {
       height: 90%;
@@ -242,7 +248,7 @@ $background: #eee;
 
 .contact-form {
   margin-top: 10px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: $background;
   font-family: sans-serif;
@@ -354,12 +360,19 @@ $background: #eee;
   }
   .contact-form {
     height: 100%;
+    width: 100%;
     .form {
       flex-direction: column;
       align-items: center;
       justify-content: center;
       .left-form {
         width: 100%;
+        form {
+          input,
+          textarea {
+            width: 100%;
+          }
+        }
       }
       .right-form {
         width: 100%;
