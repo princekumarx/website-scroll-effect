@@ -1,16 +1,13 @@
 *,
 html {
   margin: 0px;
-  scroll-behavior: smooth;
-}
-
-body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .section1 {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .section1 img {
@@ -265,26 +262,22 @@ body {
 
 .feature .left ul {
   padding-left: 0;
-  width: 100%;
 }
 
 .feature .left ul li {
   list-style-type: none;
-  width: 100%;
   padding-bottom: 20px;
   font-size: 0.9rem;
   color: #3a3a3a;
   position: relative;
-  left: 5%;
 }
 
-.feature .left ul li::before {
+.feature .left ul li::after {
   content: "";
   width: 5px;
   height: 5px;
   background-color: rgba(209, 12, 12, 0.877);
   position: absolute;
-  left: -15px;
   top: 6px;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
@@ -292,7 +285,7 @@ body {
 
 .feature .right {
   height: 60%;
-  width: 47%;
+  width: 50%;
 }
 
 .feature .right img {
@@ -417,15 +410,15 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 100%;
   }
   .feature .left {
     width: 100%;
-    height: 40%;
+    height: 45%;
   }
   .feature .right {
     width: 100%;
-    height: 45%;
-    padding: 10px;
+    height: 40%;
   }
   .feature .right img {
     height: 90%;
