@@ -416,6 +416,9 @@ html {
     width: 100%;
     height: 45%;
   }
+  .feature .left ul li::after {
+    display: none;
+  }
   .feature .right {
     width: 100%;
     height: 40%;
